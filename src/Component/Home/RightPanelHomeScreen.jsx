@@ -5,7 +5,7 @@ import { FcOpenedFolder } from 'react-icons/fc'
 import Card from '../Card'
 import { ModalContext } from '../../Context/ModalContext'
 import { PlaygroundContext } from '../../Context/PlaygroundContext'
-import { useNavigate } from 'react-router'
+//import { useNavigate } from 'react-router'
 
 
 function RightPaneHomeScreen() {
@@ -65,7 +65,7 @@ function RightPaneHomeScreen() {
                             <Card key={playgroundId} >
                                 <div className='flex items-center justify-between'>
                                     <div className='flex gap-4'>
-                                        <img src='/logo-small.png' />
+                                        <img src='/logo-small.png' alt="logo"/>
                                         <div>
                                             <h4>{playground.title}</h4>
                                             <h4>Language: {playground.language}</h4>

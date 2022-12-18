@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ModalContext } from '../Context/ModalContext'
-import { RxCross1 } from 'react-icons/rx'
+//import { RxCross1 } from 'react-icons/rx'
 import { NewFolder, NewPlayGround, NewPlayGroundAndFolder, EditFolder, EditPlayGroundTitle, Loading } from './ModalTypes'
 function Modal() {
     const { isOpenModal } = useContext(ModalContext)
