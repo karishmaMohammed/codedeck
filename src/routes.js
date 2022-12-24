@@ -10,7 +10,7 @@ const Page404 = React.lazy(() => import("./Pages/Page404"));
         component: <Home />
     },
     {
-        path: "/code/:folderID/:playgroundID",
+        path: "/playground/:folderId/:playgroundId",
         component: <PlayGround />
     },
     {

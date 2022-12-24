@@ -25,7 +25,7 @@ function EditPlayGroundTitle() {
           className='border-[.5px] text-sm  border-gray  rounded-lg shadow-sm  p-2 w-full'
         />
         <button
-          className='p-3 w-36 text-black bg-white rounded-lg font-semibold bg-darkBlue border-[0.5px] border-gray shadow-lg'
+          className='p-3 w-36 text-black bg-primaryLight rounded-lg font-semibold bg-darkBlue border-[0.5px] border-gray shadow-lg'
           onClick={() => {
             editPlaygroundTitle(folderId, cardId ,playgroundTitle);
             closeModal();

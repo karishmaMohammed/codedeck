@@ -7,6 +7,9 @@ import {
 import routes from './routes';
 import ModalProvider from './Context/ModalContext';
 import  PlaygroundProvider  from './Context/PlaygroundContext';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 const Loader = () => {
   <div className='flex justify-center items-center'>
     <div className='spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full ' role="status">
@@ -33,6 +36,7 @@ function App() {
                 </>
               </Routes>
             </Router>
+            <ToastContainer />
           </ModalProvider>
         </PlaygroundProvider>
 

@@ -60,7 +60,7 @@ function NewPlayGroundAndFolder() {
 
         />
         <button
-          className='p-3 w-36 text-black bg-white rounded-lg font-semibold bg-darkBlue border-[0.5px] border-gray shadow-lg'
+          className='p-3 w-36 text-black bg-primaryLight rounded-lg font-semibold bg-darkBlue border-[0.5px] border-gray shadow-lg'
           onClick={() => {
             addPlaygroundAndFolder(folderName, playgroundName, language.value);
             closeModal();

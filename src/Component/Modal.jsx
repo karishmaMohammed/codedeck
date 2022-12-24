@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ModalContext } from '../Context/ModalContext'
 //import { RxCross1 } from 'react-icons/rx'
-import { NewFolder, NewPlayGround, NewPlayGroundAndFolder, EditFolder, EditPlayGroundTitle, Loading } from './ModalTypes'
+import { NewFolder, NewPlayGround, NewPlayGroundAndFolder, EditFolder, EditPlayGroundTitle, Loading,SignInSignUp } from './ModalTypes'
 function Modal() {
     const { isOpenModal } = useContext(ModalContext)
     const { modalType } = isOpenModal;
@@ -11,7 +11,8 @@ function Modal() {
     // 3: New Playground and Folder
     // 4: Rename Folder
     // 5: Rename Playground
-
+    // 6: Loading
+    //7 : signIN sign up page 
     return (
         <>
             <div
@@ -27,6 +28,7 @@ function Modal() {
                         {modalType === 4 && <EditFolder />}
                         {modalType === 5 && <EditPlayGroundTitle />}
                         {modalType === 6 && <Loading />}
+                        {modalType === 7 && <SignInSignUp />}
                     </div>
                 </div>
             </div>
