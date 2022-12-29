@@ -76,7 +76,7 @@ function EditorContainer({
                                 cardId: playgroundId,
                             }
                         })} />
-                        <button className=' font-normal  rounded-full p-2 bg-goldenrod'>
+                        <button className=' font-normal  rounded-full p-2 bg-green'>
                             Save Code
                         </button>
                     </div>
@@ -115,7 +115,7 @@ function EditorContainer({
                     <a className="flex gap-3 items-center" href={`data:text/plain;charset=utf-8,${encodeURIComponent(currentCode)}`} download="code.txt">
                         <BiExport style={{ fontSize: "1.5rem" }} /> Export Code
                     </a>
-                    <button onClick={runCode} className=' font-normal  rounded-full p-2 bg-goldenrod'>
+                    <button onClick={runCode} className=' font-normal  rounded-full p-2 bg-green'>
                         Run Code
                     </button>
                 </div>
