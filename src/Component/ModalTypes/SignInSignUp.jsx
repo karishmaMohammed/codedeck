@@ -14,7 +14,8 @@ function SignInSignUp() {
     const googleProvider = new GoogleAuthProvider();
     const signInWithGoogle = () => {
         signInWithPopup(auth, googleProvider).then((result) => {
-            console.log(result)
+            console.log(result);
+            closeModal()
         }).catch((error) => {
             console.log(error)
         })
@@ -30,7 +31,7 @@ function SignInSignUp() {
                 <h2>{signInShow ? "Sign In " : "Sign Up"}</h2>
                 {!signInShow ? <SignUp /> : <SignIn />}
                 <div className='p-4 w-full'>
-                    <button onClick={signInWithGoogle} className='w-full border-2 bg-primaryLight p-3 font-semibold shadow-lg rounded-lg'> Sign In With Google</button>
+                    <button onClick={signInWithGoogle} className='w-full border-2 bg-primary p-3 font-semibold shadow-lg rounded-full'> Sign In With Google</button>
                 </div>
             </div>
         </div>

@@ -61,7 +61,7 @@ function SignUp() {
                     required
                 />
             </form>
-            <button type='submit' form='hook-form' className='w-full border-2 bg-primaryLight p-3 mt-8 font-semibold shadow-lg rounded-lg'> Sign Up</button>
+            <button type='submit' form='hook-form' className='w-full border-2 bg-primary p-3 mt-8 font-semibold shadow-lg rounded-full'> Sign Up</button>
         </div>
     )
 }

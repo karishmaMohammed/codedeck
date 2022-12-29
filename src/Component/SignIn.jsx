@@ -24,6 +24,7 @@ function SignIn() {
         auth.signInWithEmailAndPassword(data.email, data.password).then((userCredential) => {
             console.log(userCredential)
             toast.success("Login Succesfull", toastArray);
+            closeModal()
         
         }
         ).catch((error) => {
@@ -33,7 +34,6 @@ function SignIn() {
         })
         console.log(data)
         console.log(register);
-        console.log(closeModal);
     }
     return (
         <div className='flex flex-col w-full p-4'>
@@ -58,7 +58,7 @@ function SignIn() {
                     required
                 />
             </form>
-            <button type='submit' form='hook-form' className='w-full border-2 bg-green p-3 mt-8 font-semibold shadow-lg rounded-lg'> Sign In</button>
+            <button type='submit' form='hook-form' className='w-full rounded-full border-2 bg-green p-3 mt-8 font-semibold shadow-lg '> Sign In</button>
             <ToastContainer />
         </div>
     )

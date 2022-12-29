@@ -12,7 +12,7 @@ module.exports = {
       black: "#1E1E1E",
       white: "#FFFFFF",
       goldenrod: "#DAA520",
-      green: "#3BB143"
+      green: "#41A317"
     },
     extend:{
       fontFamily: {

@@ -7,13 +7,25 @@ import Card from '../Card';
 import { ModalContext } from "../../Context/ModalContext";
 import { PlaygroundContext } from "../../Context/PlaygroundContext";
 import { useNavigate } from "react-router-dom";
+import { auth } from '../../firebaseConfig'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 function RightPaneHomeScreen() {
     const navigate = useNavigate();
+    const [user] = useAuthState(auth);
 
     const { openModal } = useContext(ModalContext);
     const { folders, deleteFolder, deleteCard } = useContext(PlaygroundContext);
 
+    const logout = (e) => {
+        auth.signOut().then(() => {
+            window.localStorage.clear();
+            console.log("Sign-out successful.")
+        }).catch((error) => {
+            console.log(error)
+            console.log("Sign-out Unsuccessful.")
+        });
+    }
 
     return (
         <div className='border-black h-screen p-8'>
@@ -28,19 +40,19 @@ function RightPaneHomeScreen() {
                     }
                 })}> <button className=" font-semibold text-xl p-3 rounded-full bg-goldenrod">+ New Folder</button></h4>
 
-                <h4 onClick={() => openModal({
+            <h4> <span className='font-semibold text-2xl'></span> {user ? <span onClick={()=>logout()} ><button className=" font-semibold text-xl p-3 rounded-full bg-goldenrod">LogOut</button></span> : <span onClick={() => openModal({
                     show: true,
                     modalType: 7,
                     identifiers: {
                         folderId: "",
                         cardId: "",
                     }
-                })}><span className='font-semibold text-2xl'></span><button className="bg-goldenrod p-3 rounded-full font-semibold text-xl">LogIn</button></h4>
+                })}><button className=" font-semibold text-xl p-3 rounded-full bg-goldenrod">LogIn</button></span>}</h4>
 
             </div>
-            <hr class="mb-12 mt-4 bg-black" />
-
-            {Object.entries(folders).map(([folderId, folder]) => (
+            <hr className="mb-12 mt-4 bg-black" />
+                {console.log(folders)}
+            {folders && Object.entries(folders).map(([folderId, folder]) => (
                 <div className='flex-col flex my-8'>
                     <div className='flex justify-between placeholder:mt-8 items-center'>
                         <div className='flex gap-4 items-center'>
