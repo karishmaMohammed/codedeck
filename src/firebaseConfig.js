@@ -3,13 +3,13 @@ import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBHzwbktISJ7Qnu8I-0KGw13m4sT_iAXkI",
-  authDomain: "code-editor-b24e1.firebaseapp.com",
-  projectId: "code-editor-b24e1",
-  storageBucket: "code-editor-b24e1.appspot.com",
-  messagingSenderId: "379438014309",
-  appId: "1:379438014309:web:80d259a32cf053f4270b8c",
-  measurementId: "G-2E27D2JZP1"
+  apiKey: "AIzaSyCIm0ia6W9a2XJEM270NnT1zogeo9lw3BI",
+  authDomain: "code-editor-276eb.firebaseapp.com",
+  projectId: "code-editor-276eb",
+  storageBucket: "code-editor-276eb.appspot.com",
+  messagingSenderId: "815588031643",
+  appId: "1:815588031643:web:4061e25a1c3518cd6b5a3e",
+  measurementId: "G-XMM5JVJZFV"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
