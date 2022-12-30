@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
 function Page404() {
@@ -11,7 +12,7 @@ function Page404() {
                 Page Not Found
             </div>
             <button class="mt-5">
-                <a href="/404"
+                <Link 
                     class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
                 >
                     <span
@@ -22,7 +23,7 @@ function Page404() {
                         {/* <router-link to="/">Go Home</router-link> */}
                         <div onClick={()=>{navigate("/")}}>Go Home</div>
                     </span>
-                </a>
+                </Link>
             </button>
         </main>
   )
